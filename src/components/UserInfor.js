@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 
 class UserInfor extends React.Component {
-    
     state = {
         name: 'Duc',
         address: 'HCM',
-        age: 26
+        age: 26,
     };
 
     // handleClick(event){
@@ -24,44 +23,43 @@ class UserInfor extends React.Component {
 
     handleOnChangeName = (event) => {
         this.setState({
-            name: event.target.value
-        })
-    }
+            name: event.target.value,
+        });
+    };
 
     handleOnChangeAge = (event) => {
         this.setState({
-            age: event.target.value
-        })
-    }
+            age: event.target.value,
+        });
+    };
     handleOnSubmit = (event) => {
         event.preventDefault();
         console.log(this.state);
-    }
+    };
 
     render() {
-        return(
+        return (
             <div>
                 My name is {this.state.name} and i'm from {this.state.age}
-                
-                <form onSubmit={(event)=> this.handleOnSubmit(event)}>
-                    <label>Your name:</label>
-                    <input 
-                        value = {this.state.name}
+                <form onSubmit={(event) => this.handleOnSubmit(event)}>
+                    <label class="red">Your name:</label>
+                    <input
+                        value={this.state.name}
                         type="text"
-                        onChange={(event)=>this.handleOnChangeName(event)}
+                        onChange={(event) => this.handleOnChangeName(event)}
                     />
                     <button>submit</button>
 
                     <label>Your age:</label>
-                    <input 
-                        value = {this.state.age}
+                    <input
+                        value={this.state.age}
                         type="text"
-                        onChange={(event)=>this.handleOnChangeAge(event)}
+                        onChange={(event) => this.handleOnChangeAge(event)}
                     />
                     <button>submit</button>
                 </form>
             </div>
-        )
+        );
     }
 }
 export default UserInfor;
