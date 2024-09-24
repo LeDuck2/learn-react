@@ -6,14 +6,14 @@ import MyComponent from './components/MyComponent';
 import React from 'react';
 
 class App extends React.Component {
-	render() {
-		return (
-			<div>
-				hello world
-				<MyComponent></MyComponent>
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div>
+                hello world
+                <MyComponent></MyComponent>
+            </div>
+        );
+    }
 }
 
 // const App = () => {

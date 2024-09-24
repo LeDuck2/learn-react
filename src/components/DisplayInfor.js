@@ -2,13 +2,13 @@ import React from 'react';
 
 class DisplayInfor extends React.Component {
     state = {
-        isShowListUser: false
-    }
+        isShowListUser: true,
+    };
 
     handleShowHide = () => {
         this.setState({
-            isShowListUser: !this.state.isShowListUser
-        })
+            isShowListUser: !this.state.isShowListUser,
+        });
     };
 
     render() {
@@ -19,8 +19,14 @@ class DisplayInfor extends React.Component {
         return (
             <div>
                 <div>
-                    <span onClick={() => {this.handleShowHide();}}> 
-                        {this.state.isShowListUser === true ? "show this user" : "hide this user" }
+                    <span
+                        onClick={() => {
+                            this.handleShowHide();
+                        }}
+                    >
+                        {this.state.isShowListUser === true
+                            ? 'show this user'
+                            : 'hide this user'}
                     </span>
                 </div>
                 {this.state.isShowListUser && (
