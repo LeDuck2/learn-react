@@ -1,4 +1,6 @@
 import React from 'react';
+import './DisplayInfor.scss';
+import logo from './../logo.svg';
 
 class DisplayInfor extends React.Component {
     state = {
@@ -11,13 +13,15 @@ class DisplayInfor extends React.Component {
         });
     };
 
+    componentDidMount() {}
     render() {
         //destructuring array/object
         const {listUser} = this.props;
         //console.log(listUser);
         //console.table(listUser);
         return (
-            <div>
+            <div className="Display-Infor-Container">
+                <img src={logo} />
                 <div>
                     <span
                         onClick={() => {
